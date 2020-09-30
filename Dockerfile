@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:2.6-slim
 
 # Copy local code to the container image.
 ENV APP_HOME /app
@@ -22,4 +22,5 @@ RUN python test.py
 
 EXPOSE 8080
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080",  "--workers", "1", "--threads", "8", "app:app", "--timeout", "900"]
+#CMD ["gunicorn", "--bind", "0.0.0.0:8080",  "--workers", "1", "--threads", "8", "app:app", "--timeout", "900"]
+CMD exec gunicorn --bind :"0.0.0.0:8080", --workers 1 --threads 8 --timeout 0 main:app
