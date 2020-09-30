@@ -1,9 +1,12 @@
-from flask import request
-import flask
+import numpy as np
+from flask import Flask, request, make_response
+import json
+import pickle
+from flask_cors import cross_origin
 import rs
 
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 
 @app.route('/')
