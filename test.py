@@ -4,4 +4,3 @@ context = "Telefon mobil Samsung Galaxy A31, Dual SIM, 64GB, 4G, Prism Crush Bla
 question = "Ce surprinde Macro Cam la Samsung Galaxy A31?"
 
 answer = rs.predict(context, question)
-print(answer)
