@@ -11,7 +11,7 @@ COPY . ./
 
 
 COPY requirements.txt .
-RUN pip uninstall -U tensorflow
+RUN pip uninstall tensorflow
 RUN pip install tensorflow==1.14
 RUN pip install -r requirements.txt
 
