@@ -1,5 +1,4 @@
 from flask import request
-from model import model
 import flask
 import rs
 
