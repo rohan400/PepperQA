@@ -45,7 +45,7 @@ def processRequest(req):
     if (intent=='QA - yes'):
         answer = rs.predict(context, question)
        
-        fulfillmentText= answer
+        fulfillmentText= "Response:  {} !".format(answer)
         #log.write_log(sessionID, "Bot Says: "+fulfillmentText)
         return {
             "fulfillmentText": fulfillmentText
