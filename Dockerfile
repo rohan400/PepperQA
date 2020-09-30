@@ -24,4 +24,4 @@ RUN python test.py
 
 #EXPOSE 8080
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080",  "--workers", "1", "--threads", "8", "app:app", "--timeout", "900"]
+
