@@ -24,4 +24,4 @@ RUN python test.py
 
 #EXPOSE 8080
 
-CMD ["gunicorn", "app:app"]
+CMD ["gunicorn"]
