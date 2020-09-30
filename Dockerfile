@@ -22,6 +22,6 @@ RUN app.py
 # For environments with multiple CPU cores, increase the number of workers
 # to be equal to the cores available.
 
-EXPOSE 8080
+#EXPOSE 8080
 
 CMD ["gunicorn", "--bind", "0.0.0.0:8080",  "--workers", "1", "--threads", "8", "app:app", "--timeout", "900"]
