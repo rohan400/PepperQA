@@ -47,7 +47,8 @@ def processRequest(req):
     intent = result.get("intent").get('displayName')
     
     if (intent=='QA - yes'):
-        answer = rs.predict(context, question)
+	answer = 'Done'
+        #answer = rs.predict(context, question)
        
         fulfillmentText= str(answer)
         #log.write_log(sessionID, "Bot Says: "+fulfillmentText)
