@@ -1,4 +1,4 @@
-tensorflow==1.14.0   # CPU Version of TensorFlow.
+tensorflow==1.14  # CPU Version of TensorFlow.
 boto3==1.12.27
 botocore==1.15.27
 certifi==2019.11.28
