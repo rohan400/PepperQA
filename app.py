@@ -9,7 +9,7 @@ import rs
 app = Flask(__name__)
 
 
-'''@app.route('/')
+@app.route('/')
 def hello():
     return 'Hello World'
 
@@ -58,11 +58,12 @@ def processRequest(req):
     #else:
     #    log.write_log(sessionID, "Bot Says: " + result.fulfillmentText)
 
-if __name__ == '__main__':
+'''if __name__ == '__main__':
     app.run()'''
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
 
-
-@app.route('/')
+'''@app.route('/')
 def index():
 
     if request.args:
@@ -79,7 +80,7 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))'''
 
 
 #if __name__ == '__main__':
