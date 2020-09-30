@@ -9,7 +9,7 @@ import rs
 app = Flask(__name__)
 
 
-@app.route('/')
+'''@app.route('/')
 def hello():
     return 'Hello World'
 
@@ -59,7 +59,29 @@ def processRequest(req):
     #    log.write_log(sessionID, "Bot Says: " + result.fulfillmentText)
 
 if __name__ == '__main__':
-    app.run()
+    app.run()'''
+
+
+@app.route('/')
+def index():
+
+    if request.args:
+
+        context = request.args["context"]
+        question = request.args["question"]
+
+        answer = model.predict(context, question)
+        print(answer["answer"])
+
+        return flask.render_template('index.html', question=question, answer=answer["answer"])
+    else:
+        return flask.render_template('index.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+
+
 #if __name__ == '__main__':
 #    port = int(os.getenv('PORT', 5000))
 #    print("Starting app on port %d" % port)
