@@ -36,8 +36,10 @@ def processRequest(req):
     #user_says=result.get("queryText")
     #log.write_log(sessionID, "User Says: "+user_says)
     parameters = result.get("parameters")
-    context=parameters.get("context")
-    question = parameters.get("question")
+    contexttemp=parameters.get("context")
+    questiontemp = parameters.get("question")
+    context = str(contexttemp)
+    question = str(questiontemp)
     
 	 
     intent = result.get("intent").get('displayName')
