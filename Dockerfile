@@ -1,4 +1,4 @@
-FROM python:2.6-slim
+
 
 # Copy local code to the container image.
 ENV APP_HOME /app
