@@ -874,7 +874,7 @@ def predict(context, question):
 
 
     s3_model_url = 'https://storage.googleapis.com/bertpepper/model.ckpt-145375.data-00000-of-00001'
-    path_to_model = download_model(s3_model_url, model_name="model.ckpt-145375")
+    path_to_model = download_model(s3_model_url, model_name="model.ckpt-145375.data-00000-of-00001")
 
 
     tf.logging.set_verbosity(tf.logging.INFO)
