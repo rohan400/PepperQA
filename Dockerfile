@@ -10,8 +10,9 @@ COPY . ./
 # Copying this separately prevents re-running pip install on every code change.
 
 
+COPY requirements.txt .
 
-RUN python install -r requirements.txt
+RUN pip install -r requirements.txt
 
 RUN python test.py
 
