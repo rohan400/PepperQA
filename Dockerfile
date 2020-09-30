@@ -3,9 +3,9 @@
 FROM python:3.7-slim
 
 # Copy local code to the container image.
-#ENV APP_HOME /app
-#WORKDIR $APP_HOME
-#COPY . ./
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
 
 # Install production dependencies.
 # Copy application dependency manifests to the container image.
@@ -23,5 +23,6 @@ RUN python test.py
 # to be equal to the cores available.
 
 #EXPOSE 8080
+CMD ["gunicorn", "app:app"]
 
 
