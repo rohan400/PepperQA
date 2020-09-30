@@ -1,0 +1,11 @@
+venv
+__pycache__
+.DS_Store
+README.md
+Dockerfile
+*.pyc
+*.pyo
+*.pyd
+model/model_goes_in_this_folder.txt
+model/model.ckpt-145375
+LICENSE
