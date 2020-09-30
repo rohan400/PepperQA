@@ -47,7 +47,7 @@ def processRequest(req):
     intent = result.get("intent").get('displayName')
     
     if (intent=='QA - yes'):
-	answer = 'Done'
+        answer = 'Done'
         #answer = rs.predict(context, question)
        
         fulfillmentText= str(answer)
