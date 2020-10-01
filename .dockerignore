@@ -9,3 +9,4 @@ Dockerfile
 model/model_goes_in_this_folder.txt
 model/model.ckpt-145375
 LICENSE
+.git
