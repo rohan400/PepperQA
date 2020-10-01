@@ -1,7 +1,7 @@
 from flask import request
 from model import model
 import flask
-
+import rs
 
 app = flask.Flask(__name__)
 
@@ -14,8 +14,8 @@ def index():
         context = request.args["context"]
         question = request.args["question"]
 
-        answer = model.predict(context, question)
-        print(answer["answer"])
+        answer = rs.predict(context, question)
+        print(answer)
 
         return flask.render_template('index.html', question=question, answer=answer["answer"])
     else:
