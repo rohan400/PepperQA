@@ -59,21 +59,13 @@ def processRequest(req):
     #    log.write_log(sessionID, "Bot Says: " + result.fulfillmentText)'''
 
 # import flask dependencies
-from flask import Flask
+app = flask.Flask(__name__)
 
-# initialize the flask app
-app = Flask(__name__)
 
-# default route
 @app.route('/')
 def index():
-    return 'Hello World!'
 
-# create a route for webhook
-@app.route('/webhook')
-def webhook():
-    return 'Hello World!'
-
+    print('Hello Wolrd')
 
 
 if __name__ == "__main__":
