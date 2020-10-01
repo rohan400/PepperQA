@@ -6,6 +6,7 @@ Dockerfile
 *.pyc
 *.pyo
 *.pyd
-LICENSE
+/images
 .git
+LICENSE
 Procfile
