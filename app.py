@@ -6,7 +6,7 @@ import flask
 app = flask.Flask(__name__)
 
 
-@app.route('/')
+'''@app.route('/')
 def index():
 
     if request.args:
@@ -20,7 +20,7 @@ def index():
 
         return flask.render_template('index.html', question=question, answer=answer)
     else:
-        return flask.render_template('index.html')
+        return flask.render_template('index.html')'''
 
 
 if __name__ == "__main__":
