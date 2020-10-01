@@ -1,2 +1,3 @@
 web: gunicorn app:app
---timeout 50000
+web: python test.py
+
