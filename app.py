@@ -1,4 +1,4 @@
-import numpy as np
+'''import numpy as np
 from flask import Flask, request, make_response
 import json
 import pickle
@@ -56,12 +56,29 @@ def processRequest(req):
             "fulfillmentText": 'Please wait.....'
         }
     #else:
-    #    log.write_log(sessionID, "Bot Says: " + result.fulfillmentText)
+    #    log.write_log(sessionID, "Bot Says: " + result.fulfillmentText)'''
 
-'''if __name__ == '__main__':
-    app.run()'''
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+# import flask dependencies
+from flask import Flask
+
+# initialize the flask app
+app = Flask(__name__)
+
+# default route
+@app.route('/')
+def index():
+    return 'Hello World!'
+
+# create a route for webhook
+@app.route('/webhook')
+def webhook():
+    return 'Hello World!'
+
+
+if __name__ == '__main__':
+    app.run()
+'''if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))'''
 
 '''@app.route('/')
 def index():
