@@ -17,7 +17,7 @@ RUN pip uninstall -y tensorflow
 RUN pip install tensorflow==1.14
 RUN pip install -r requirements.txt
 
-RUN python test.py
+#RUN python test.py
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
