@@ -18,7 +18,7 @@ def index():
         answer = 'Done'
         print(answer)
 
-        return flask.render_template('index.html', question=question, answer=answer["answer"])
+        return flask.render_template('index.html', question=question, answer=answer)
     else:
         return flask.render_template('index.html')
 
