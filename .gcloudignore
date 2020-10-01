@@ -5,5 +5,4 @@ README.md
 __pycache__
 .git
 .DS_Store
-model/model_goes_in_this_folder.txt
 model/model.ckpt-145375
