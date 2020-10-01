@@ -873,11 +873,11 @@ def download_model(s3_url, model_name):
 
 def load_model():
     print('************************************************')
-    s3_model_url = 'https://distilbert-finetuned-model.s3.eu-west-2.amazonaws.com/pytorch_model.bin'
+    s3_model_url = 'https://storage.googleapis.com/bertpepper/model.ckpt-6910.data-00000-of-00001'
     print('************************************************')
-    path_to_model1 = download_model(s3_model_url, model_name="model.ckpt-145375.data-00000-of-00001")
+    path_to_model1 = download_model(s3_model_url, model_name="model.ckpt-6910.data-00000-of-00001")
     print('************************************************')
-    path_to_model = 'model/model.ckpt-145375'
+    path_to_model = 'model/model.ckpt-6910'
 
     return path_to_model
 
