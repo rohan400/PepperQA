@@ -880,8 +880,9 @@ def load_model():
     return path_to_model
 
 def predict(context, question):
-
+    print('************************************************')
     path_to_model=load_model()
+    print('************************************************')
     tf.logging.set_verbosity(tf.logging.INFO)
 
     bert_config = modeling.BertConfig.from_json_file('model/config.json')
